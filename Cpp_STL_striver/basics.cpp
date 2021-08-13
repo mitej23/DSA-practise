@@ -115,6 +115,84 @@ int main(){
     // st.begin() -> It will point to the first element 
     // st.erase(st.begin,st.begin+2) -> It will remove the first 2 elements)
     // st.erase(5) -> It will remove the element will value 5 
+    
+    set<int> st = {1,4, 7, 8};
+
+    auto it = st.find(7);
+    auto it = st.find(8);
+
+    st.emplace(6) // faster than st.insert(6) 
+
+    //unordered_set
+
+    // Average Time complexixty is O(1)
+    // Worst time complexity is O(n)
+
+    unordered_set<int> us;
+    us.insert(1);
+    us.insert(2);
+    us.insert(3);
+
+    // Multiset => log(n) time complexity)
+
+    // It allows duplicates in sorted fashion
+
+    multiset<int> ms;
+    ms.insert(1);
+    ms.insert(2);
+    ms.insert(3);
+    ms.insert(1); // ms.emplace(1)
+    // ms => {1,1,2,3}
+
+    ms.clear(); // It will clear all elements)
+
+    ms.count(1); // It will return the number of elements with value 1
+
+    // Map => Log n time complexity
+    // It is a key value pair
+    // It is in ascending order according to keys
+
+    map<string, int> mp;
+    mp["asdf"] = 1;
+    mp["mitej"] = 2;
+    mp["shreya"] = 3;
+    mp["shreya"] = 4; // It will overwrite the value
+    mp.emplace("shreya", 5); // It will add the element with value 5 faster
+    mp.erase(mp.find("shreya")); // It will remove the element with value "shreya"
+    mp.erase(mpp.begin()); // It will remove the first element)))
+    mp.clear(); // It will clear all elements
+    mp.find("shreya"); // It will return the iterator to the element with value "shreya"
+    mp.empty(); // It will return true if the map is empty
+
+    cout<<"Map"<<endl;
+
+    for(auto it : mp){
+        cout<<it.first<<"-"<<it.second<<endl;
+    }
+
+    // Unordered map => O(1) time complexity in almost all cases)
+    // It is a key value pair
+
+    // Multi map => O(1) time complexity
+
+    // sorted and multiple keys
+
+    // Pair class
+    pair<int,int> pr = {1,2};
+    pair< pair<int,int>, int > ppp = {{1,2},3};
+    // For getting 2 => ppp.first.second
+
+    vector<pair<int,int>> vp;
+    vp.push_back({1,2});
+
+    // Stack
+    stack<int> st;
+    st.push(1);
+    // pop , top, empty, size , push and emplace
+
+
+
+    
 
 
 
