@@ -190,11 +190,69 @@ int main(){
     st.push(1);
     // pop , top, empty, size , push and emplace
 
+    // -    -   -   -   -   -   -   -   Lecture 3 - -   -   -   -   -   -
 
+    // bitset => They are used in segment trees
+    // It is a vector of bits
+    // It is useful for fast bit manipulation
 
+    bitset<32> bs;
+
+    //  all => if all are 1 ret true else if anyone is 0 ret false
+    //  any => if any is 1 ret true else if no one is 0 ret false
+    //  count => It will return the number of 1s in the bitset
+    //  flip  => It will flip the bit at the index
+    // none => if all are 0 ret true else if anyone is 1 ret false
+    // set() or set(pos , 1/0) => sets everything 
+    // reset => resets everything
+    // size 
     
 
 
+
+    // -    -   -   -   -   (Algorithms in STL)
+
+    // Sorting - used merge sort if not allowed
+
+    int arr[] = {1,2,3,4,5,6,7,8,9,10};
+
+    sort(arr,arr+10); // It will sort the array in ascending order)
+
+
+    vector<int> v(10);
+    sort(v.begin(),v.begin() + 4); // It will sort the vector in ascending order)
+
+    // Reverse
+
+    // reverse() - same as sort()
+
+    // To find maximum element 
+
+    int elmax = *max_element(arr,arr+10);
+    int elmin = *min_element(arr,arr+10);
+
+
+    // To find a sum in a range
+
+    int sum = accumulate(arr,arr+10,0);
+
+    // To find the ocurence of a number in a range
+
+    int occ = count(arr,arr+10,1);
+
+    // Binary sort in a range
+    // It requires a sorted array
+
+    bool b = binary_search(arr,arr+10,1);
+
+    // Lower & upper bound function
+    // It returns an iterator pointing to first
+    // element which is (not less) / greator than the value
+    auto lb = lower_bound(arr,arr+10,1);
+    ind = lb - arr;
+
+    auto ub = upper_bound(arr,arr+10,1);
+    ind = ub - arr;
 
     
     return 1;    
