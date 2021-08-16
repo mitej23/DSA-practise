@@ -15,5 +15,5 @@ int main(){
         adj[u][v] = 1;
         adj[v][u] = 1;
     }
-    return;
+    return 1;
 }
